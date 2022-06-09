@@ -1,14 +1,16 @@
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(165, 165, 165);
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Times New Roman", Times, serif;
+  font-family:monospace;
+  
 }
 .todo-list {
   display: flex;
@@ -60,6 +62,7 @@ button:hover {
 }
 
 .todo {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,26 +71,29 @@ button:hover {
   width: 80vw;
 }
 .todo-div {
+  border-radius: 2%;
+  box-shadow: 5px 4px 10px;
   display: flex;
   gap: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 0.2rem 0.5rem;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   width: 100%;
   min-height: auto;
   animation-name: appearTodo2;
   animation-duration: 0.5s;
 }
 .todo-div-active {
+  color: rgba(255, 255, 255, 0.7);
   display: flex;
   gap: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 0.2rem 0.5rem;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   transform: scale(90%);
   transform: all 2s ease;
@@ -142,7 +148,7 @@ button:hover {
   transition: all 0.2s ease;
 }
 .btn-v-active {
-  background-color: cadetblue;
+  background-color: rgb(26, 149, 49);
 }
 .btn .btn-x {
   font-weight: 500;
