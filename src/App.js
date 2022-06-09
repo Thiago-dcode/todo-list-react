@@ -70,7 +70,7 @@ function App() {
 
   return (
     <div className="todo-list">
-      <h1>TODO LIST</h1>
+      <h1>TODO LIST APP</h1>
       <AddTodo getInput={getInput} handleInput={handleInput} />
       <Btn handleActive={handleActive}
       handleDeleteAll = {handleDeleteAll}
