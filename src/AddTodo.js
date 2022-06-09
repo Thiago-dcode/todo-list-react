@@ -14,7 +14,7 @@ const AddTodo = ({getInput, handleInput}) => {
         type="text"
         placeholder="What do you have to do?"
       />
-      <button onClick={handleInput}>add</button>
+      <button onClick={handleInput}>ADD</button>
     </div>
   );
 };
