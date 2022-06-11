@@ -15,7 +15,7 @@ const Todo = ({todo, handleDelete,handleSelect}) => {
       </div>
       <div className="btn">
         <button onClick={(e) =>{handleSelect(div, e.target)}} className="btn-v"></button>
-        <button onClick={()=>{handleDelete(div.id)}} className="btn-x">X</button>
+        <button onClick={()=>{handleDelete(div.id)}} className="btn-x"></button>
       </div>
     </div>
     )
