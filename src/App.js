@@ -8,19 +8,21 @@ import { useLocalStorage } from "./useLocalStoreage";
 function App() {
   const [id, setId] = useLocalStorage('id', 0);
   const [input, setInput] = useState("");
+  const[dateInput, setDateInput] = useState("");
   const [todo, setTodo] = useLocalStorage('todo',[])
 
   const getInput = (target) => {
     setInput(target);
   };
-
+  const getDateInput = target => setDateInput(target)
   const handleInput = () => {
     if (input !== "" ) {
       setId(id + 1);
       const newTodo = {
         id: id,
         txt: input,
-        date: GetDate(),
+        date: GetDate('todo'),
+        lastDay: dateInput,
         active: false,
       };
       const finaTodo = [...todo, newTodo]
@@ -72,7 +74,9 @@ function App() {
     <div className="todo-list">
       <div id="title"><h1>TODO LIST APP</h1></div>
       
-      <AddTodo getInput={getInput} handleInput={handleInput} />
+      <AddTodo getInput={getInput}
+      getDateInput = {getDateInput}
+       handleInput={handleInput} />
       <Btn handleActive={handleActive}
       handleDeleteAll = {handleDeleteAll}
       length = {todo.length} />

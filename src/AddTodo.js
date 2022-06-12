@@ -1,8 +1,12 @@
 
 import React from "react";
+import {  } from "react";
+import { GetDate } from "./GetDate";
 
 
-const AddTodo = ({getInput, handleInput}) => {
+
+const AddTodo = ({getInput, handleInput,getDateInput}) => {
+
 
 
   return (
@@ -14,6 +18,7 @@ const AddTodo = ({getInput, handleInput}) => {
         type="text"
         placeholder="What do you have to do?"
       />
+      <input onChange={(e) => {getDateInput(e.target.value)}} type="date" placeholder="for when" name="" id="" min={GetDate('min')}  />
       <button onClick={handleInput}>ADD</button>
     </div>
   );
